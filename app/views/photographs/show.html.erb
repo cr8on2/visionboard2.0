@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Image:</b>
+  <%= image_tag @photograph.image, width: 300 %>
+</p>
+
+<p>
+  <b>Photo caption:</b>
+  <%= @photograph.photo_caption %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @photograph.comment %>
+</p>
+
+<p>
+  <b>Tags:</b>
+  <%= @photograph.tags %>
+</p>
+
+
+<%= link_to 'Edit', edit_photograph_path(@photograph) %> |
+<%= link_to 'Back', photographs_path %>

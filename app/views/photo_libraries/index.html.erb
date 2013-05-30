@@ -1,0 +1,25 @@
+<h1>Listing photo_libraries</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Photograph</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photo_libraries.each do |photo_library| %>
+  <tr>
+    <td><%= photo_library.user_id %></td>
+    <td><%= photo_library.photograph_id %></td>
+    <td><%= link_to 'Show', photo_library %></td>
+    <td><%= link_to 'Edit', edit_photo_library_path(photo_library) %></td>
+    <td><%= link_to 'Destroy', photo_library, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Photo library', new_photo_library_path %>

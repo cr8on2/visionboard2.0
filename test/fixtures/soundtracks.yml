@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  slideshow_id: 1
+  song_id: 1
+
+two:
+  slideshow_id: 1
+  song_id: 1

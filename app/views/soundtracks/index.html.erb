@@ -1,0 +1,25 @@
+<h1>Listing soundtracks</h1>
+
+<table>
+  <tr>
+    <th>Slideshow</th>
+    <th>Song</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @soundtracks.each do |soundtrack| %>
+  <tr>
+    <td><%= soundtrack.slideshow_id %></td>
+    <td><%= soundtrack.song_id %></td>
+    <td><%= link_to 'Show', soundtrack %></td>
+    <td><%= link_to 'Edit', edit_soundtrack_path(soundtrack) %></td>
+    <td><%= link_to 'Destroy', soundtrack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Soundtrack', new_soundtrack_path %>

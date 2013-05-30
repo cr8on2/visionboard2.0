@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VisionBoard20</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	 <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        
+        <div class="nav-collapse">
+        	<a class="brand" href="/">VisionBoard</a> |
+            <a><%= link_to "Home", "/" %></a> |
+            <a><%= link_to "Users", users_url %></a> |
+            <a><%= link_to "Images", photographs_url %></a> |
+            <a><%= link_to "Songs", songs_url %><a/> |
+            <a><%= link_to "Slideshows", slideshows_url %></a> |
+            <a><a href="#about">About</a></li> |
+            
+              <% if user_signed_in? %>
+                Signed in as <%= current_user.email %>. Not you?
+              <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+              <% else %>
+              <%= link_to "Sign up", new_user_url %> or <%= link_to "Sign in", new_user_session_path %>
+              <% end %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+<%= yield %>
+
+</body>
+</html>

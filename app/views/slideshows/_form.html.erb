@@ -1,0 +1,26 @@
+<%= form_for(@slideshow) do |f| %>
+  <% if @slideshow.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slideshow.errors.count, "error") %> prohibited this slideshow from being saved:</h2>
+
+      <ul>
+      <% @slideshow.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <input type="hidden" id="selected_images" name="selected_images" value="">
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

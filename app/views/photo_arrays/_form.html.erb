@@ -1,0 +1,25 @@
+<%= form_for(@photo_array) do |f| %>
+  <% if @photo_array.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo_array.errors.count, "error") %> prohibited this photo_array from being saved:</h2>
+
+      <ul>
+      <% @photo_array.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :photograph_id %><br />
+    <%= f.number_field :photograph_id %>
+  </div>
+  <div class="field">
+    <%= f.label :slideshow_id %><br />
+    <%= f.number_field :slideshow_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
