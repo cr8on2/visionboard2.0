@@ -153,35 +153,35 @@ body {
 }
 
 .personal-best {
-  background: url('../img/personal-best.jpg') no-repeat;
+  background: url('personal-best.jpg') no-repeat;
 }
 
 .triumph {
-  background: url('../img/triumph.jpg') no-repeat;
+  background: url('triumph.jpg') no-repeat;
 }
 
 .achievement {
-  background: url('../img/achievement.jpg') no-repeat;
+  background: url('achievement.jpg') no-repeat;
 }
 
 .destination {
-  background: url('../img/destination.jpg') no-repeat;
+  background: url('destination.jpg') no-repeat;
 }
 
 .summit {
-  background: url('../img/summit.jpg') no-repeat;
+  background: url('summit.jpg') no-repeat;
 }
 
 .lifestyle {
-  background: url('../img/lifestyle.jpg') no-repeat;
+  background: url('lifestyle.jpg') no-repeat;
 }
 
 .reward {
-  background: url('../img/reward.jpg') no-repeat;
+  background: url('reward.jpg') no-repeat;
 }
 
 .dream-home {
-  background: url('../img/dream-home.jpg') no-repeat;
+  background: url('dream-home.jpg') no-repeat;
 }
 
 .home-start {

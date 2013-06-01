@@ -16,7 +16,7 @@
 jQuery.noConflict();
 (function($) {
   $(function() {
-  	
+
   $('.img-thumb').click(function() {
   	var _this = $(this);
   	var imageId = _this.data('image-id');
@@ -27,3 +27,13 @@ jQuery.noConflict();
 
   });
 })(jQuery);
+
+jQuery(function($) {
+  // Slideshow
+  $('.slide:gt(0)').hide();
+  setInterval(function(){
+    $('.home-slideshow img:first-of-type').hide().
+    next('img').show().
+    end().appendTo('.home-slideshow');
+  }, 10000);
+})
