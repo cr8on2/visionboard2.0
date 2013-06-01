@@ -1,9 +1,9 @@
 VisionBoard20::Application.routes.draw do
 
-  root :to => "users#index"
+  root :to => "Slideshows#index"
   devise_for :users
 
-  
+
 
 
   resources :soundtracks
