@@ -1,7 +1,16 @@
 VisionBoard20::Application.routes.draw do
 
+<<<<<<< HEAD
+  root :to => "Slideshows#index"
+  devise_for :users
+
+
+
+
+=======
   root to: "high_voltage/pages#show", id: 'index'
   devise_for :users
+>>>>>>> homepage-mockup
   resources :soundtracks
   resources :playlists
   resources :photo_arrays

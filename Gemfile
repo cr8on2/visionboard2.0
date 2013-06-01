@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'devise'
+gem 'carrierwave', '~> 0.8.0'
+gem 'mini_magick', '~> 3.6.0'
+gem 'devise', '~> 2.2.4'
 
 gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -25,11 +24,14 @@ group :assets do
 end
 
 group :development do
+  gem 'sqlite3', '~> 1.3.7'
 	gem 'better_errors'
 	gem 'binding_of_caller'
 end
 
+gem 'high_voltage', '~> 1.2.2'
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

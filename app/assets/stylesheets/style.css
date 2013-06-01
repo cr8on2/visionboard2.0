@@ -1,0 +1,225 @@
+/*************************************
+***|| Styles for VisionBoard
+**************************************
+
+Colors:
+
+Light Blue: #03c5fa
+Light Blue: rgba(0,207,244)
+Blue: #00aeef
+Dark Blue: rgba(0, 175, 236)
+
+*************************************/
+
+
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+body {
+  background: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main-header {
+  height: 90px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15), inset 0 -5px 0px rgba(0,0,0,0.05);
+  border-left: 1px solid #ddd;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  position: relative;
+  z-index: 2000;
+}
+
+.container-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  background: #fff;
+  box-shadow: 5px 0 1px rgba(0,0,0,0.09),
+              -5px 0 1px rgba(0,0,0,0.09);
+}
+
+.logo {
+  color: #03c5fa;
+  display: block;
+  font-size: 38px;
+  font-weight: bold;
+  padding-top: 45px;
+  padding-left: 25px;
+  float: left;
+  clear: both;
+}
+
+.logo:hover {
+  color: #03c5fa;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-nav a {
+  display: inline-block;
+  padding-top: 45px;
+  padding-bottom: 25px;
+  padding: 45px 25px 25px;
+  border-left: 1px solid rgba(255,255,255,0.5);
+  font-size: 30px;
+  margin-left: -4px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15), inset 1px 0 0 rgba(0,0,0,0.2), inset 0 -5px 0px rgba(0,0,0,0.03);
+}
+
+.main-nav a:hover {
+  text-decoration: none;
+}
+
+.main-nav-tour {
+  color: #03c5fa;
+}
+
+.main-nav-sign-up {
+  background: #03c5fa;
+  color: #fff;
+}
+
+.main-nav-log-in {
+  background: #00aeef;
+  color: #fff;
+  border-bottom-right-radius: 5px;
+}
+
+.home-slideshow {
+  margin: 0 auto;
+  margin-top: -90px;
+  position: relative;
+}
+
+.home-slideshow h1 {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  color: #fff;
+  text-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.slide {
+  text-align: center;
+  width: 100%;
+}
+
+.home-middle-container {
+  margin: 0 0 40px 0;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
+
+.home-middle-box {
+  background: rgba(0, 175, 236, 1);
+  height: 250px;
+  padding: 30px;
+  border-radius: 10px;
+  color: #fff;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  margin-top: -110px;
+  box-shadow: 0 -1px 3px rgba(0,0,0,0.5);
+}
+
+.home-middle-box h3 {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.home-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-heading h2 {
+  color: #03c5fa;
+}
+
+.home-boards .row-fluid {
+  margin-bottom: 25px;
+}
+
+.home-board {
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.personal-best {
+  background: url('personal-best.jpg') no-repeat;
+}
+
+.triumph {
+  background: url('triumph.jpg') no-repeat;
+}
+
+.achievement {
+  background: url('achievement.jpg') no-repeat;
+}
+
+.destination {
+  background: url('destination.jpg') no-repeat;
+}
+
+.summit {
+  background: url('summit.jpg') no-repeat;
+}
+
+.lifestyle {
+  background: url('lifestyle.jpg') no-repeat;
+}
+
+.reward {
+  background: url('reward.jpg') no-repeat;
+}
+
+.dream-home {
+  background: url('dream-home.jpg') no-repeat;
+}
+
+.home-start {
+  background: #03c5fa;
+}
+
+.home-start:hover {
+  text-decoration: none;
+  background: #00aeef;
+  cursor: pointer;
+}
+
+.home-start h2 {
+  color: #fff;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.home-board h3 {
+  position: absolute;
+  width: 100%;
+  color: #fff;
+  background: rgba(0, 175, 236, 0.9);
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  bottom: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.main-footer {
+  padding: 25px 0;
+  margin-top: 15px;
+  border-top: 1px solid #ddd;
+}
+
+
+
+
+
+

@@ -3,56 +3,37 @@
 <head>
   <title>VisionBoard20</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	 <div class="navbar navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </a>
-
-
-          <% flash.each do |name, msg| %>
-            <%= content_tag :div, msg, id: "flash_#{name}" %>
-          <% end %>
-
-        <div class="nav-collapse">
-          <a class="brand" href="/">VisionBoard</a> |
-            <a><%= link_to "Home", "/" %></a> |
-            <a><%= link_to "Users", users_url %></a> |
-            <a><%= link_to "Images", photographs_url %></a> |
-            <a><%= link_to "Songs", songs_url %><a/> |
-            <a><%= link_to "Slideshows", slideshows_url %></a> |
-            <a><a href="#about">About</a></li> |
+  <div class="container-container">
+    <div class="container">
+      <div class="row-fluid">
+        <header class="main-header">
+          <%= link_to "VisionBoard", '/', class: 'logo' %>
+          <nav class="pull-right main-nav">
             <% if user_signed_in? %>
-              Logged in as <strong><%= current_user.email %></strong>.
-              <%= link_to 'Edit profile', edit_user_path %> |
-              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              <%= link_to "Images", photographs_url, class: 'main-nav-tour' %>
+              <%= link_to "Songs", songs_url, class: 'main-nav-tour' %>
+              <%= link_to "Slideshows", slideshows_url, class: 'main-nav-tour' %>
+              <%= link_to "Edit profile", edit_user_registration_url, class: 'main-nav-tour' %>
+              <%= link_to 'log out', destroy_user_session_url, method: :delete, class: 'main-nav-log-in' %>
             <% else %>
-              <%= link_to "Sign up", new_user_path %> |
-              <%= link_to "Login", new_user_session_path %>
+              <a href="#" class="main-nav-tour">tour</a>
+              <%= link_to 'sign up', new_user_registration_path, class: 'main-nav-sign-up' %>
+              <%= link_to 'log in', new_user_session_path, class: 'main-nav-log-in' %>
             <% end %>
-
-              <%# if user_signed_in? %>
-                <!-- Signed in as <%#= current_user.email %>. Not you? -->
-              <%#= link_to "Sign out", destroy_user_session_path, :method => :delete %>
-              <%# else %>
-              <%#= link_to "Sign up", new_user_url %> or <%= link_to "Sign in", new_user_session_path %>
-              <%# end %>
-
-        </div>
+          </nav>
+        </header>
       </div>
     </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="main-footer">
+      <span>Copyright &copy; 2013</span>
+    </footer>
   </div>
-
-  <div class="container">
-
-    <%= yield %>
-  </div>
+  <%= javascript_include_tag "application" %>
 </body>
 </html>
