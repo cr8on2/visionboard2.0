@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'aws-sdk'
 gem 'carrierwave', '~> 0.8.0'
 gem 'mini_magick', '~> 3.6.0'
 gem 'devise', '~> 2.2.4'
