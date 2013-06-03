@@ -7,9 +7,17 @@
 
 <p>
   <b>User:</b>
-  <%= @slideshow.user_id %>
+  <%= @slideshow.user.name %>
 </p>
 
 
-<%= link_to 'Edit', edit_slideshow_path(@slideshow) %> |
-<%= link_to 'Back', slideshows_path %>
+<%#= link_to 'Edit', edit_slideshow_path(@slideshow) %> |
+<%#= link_to 'Back', slideshows_path %>
+
+<div class="inside-slideshow">
+  <% @slideshow.photographs.each do |photo| %>
+  <div>
+   <%= image_tag photo %>
+  </div>
+  <% end %>
+</div>

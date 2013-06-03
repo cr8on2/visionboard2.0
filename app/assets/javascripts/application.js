@@ -37,3 +37,15 @@ jQuery(function($) {
     end().appendTo('.home-slideshow');
   }, 10000);
 })
+
+jQuery(function($) {
+  $(".inside-slideshow > div:gt(0)").hide();
+  setInterval(function() {
+    $('.inside-slideshow > div:first')
+      .fadeOut(500)
+      .next()
+      .fadeIn(500)
+      .end()
+      .appendTo('.inside-slideshow');
+  }, 1500);
+});
