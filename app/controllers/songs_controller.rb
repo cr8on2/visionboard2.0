@@ -2,7 +2,10 @@ class SongsController < ApplicationController
   # GET /songs
   # GET /songs.json
   def index
-    @songs = Song.all
+
+    s3 =AWS::S3.new
+    bucket = s3.buckets[ENV['AWS_BUCKET']]
+    # @songs = bucket.objects
 
     respond_to do |format|
       format.html # index.html.erb
